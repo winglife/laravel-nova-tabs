@@ -1,0 +1,38 @@
+{
+    "name": "winglife/laravel-nova-tabs",
+    "description": "Laravel Nova - Tabs",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Winglife\\LaravelNovaTabs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Winglife"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8",
+        "nova-kit/nova-packages-tool": "^1.3",
+        "laravel/nova": "^4.12",
+        "ext-json": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Winglife\\LaravelNovaTabs\\NovaTabsServiceProvider"
+            ]
+        }
+    },
+    "repositories": [{
+        "type": "composer",
+        "url": "https://nova.laravel.com"
+    }],
+    "script" : {
+        "post-autoload-dump": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ]
+    }
+}
